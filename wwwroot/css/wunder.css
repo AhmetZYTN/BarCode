@@ -1,0 +1,473 @@
+:root {
+    /* colors */
+    --primary-blue: #437EF7;
+    --primary-orange: #c57000;
+    --dark-orange: #ad5c00;
+    --primary-white: #f8f8f8;
+    --white: #FFFFFF;
+    /* text color */
+    --text-primary-gray: #A5ACBA;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 380px auto 430px;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    color: var(--white);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+/* Text */
+.textSMedium {
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--text-primary-gray);
+}
+
+.textLMedium {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-darkgray);
+}
+
+
+
+/* NAV START */
+
+.sideBar {
+    background-color: var(--primary-white);
+}
+
+/* sideBarMenu start */
+.sideBarMenu {
+    background: var(--dark-orange);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.sideBarForm {
+    margin-left: auto;
+}
+
+.sideBarForm input {
+    height: 33px;
+    padding-left: 10px;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--text-primary-gray);
+}
+
+.sideBarForm input::placeholder {
+    color: var(--text-primary-gray);
+}
+
+.sideBarMenu a {
+    font-size: 30px;
+    padding-left: 5px;
+    color: var(--white);
+}
+
+.sideBarMenu a:last-child {
+    font-size: 30px;
+    padding: 10px;
+    color: #000;
+}
+/* sideBarMenu end */
+
+/* sideBarHeader start */
+.sideBarHeader {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sideBarUser {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sideBarUser i {
+    color: var(--text-primary-gray);
+}
+
+.sideBarUser a img {
+    width: 40px;
+}
+
+.sideBarUser a:last-child img {
+    width: 25px;
+}
+
+.notification {
+    display: flex;
+    gap: 25px;
+}
+
+.notification i {
+    font-size: 20px;
+}
+/* sideBarHeader end */
+
+/* dropdownSideBar start */
+.dropdownSideBar {
+    padding: 15px;
+}
+
+.dropdownSideBar i {
+    font-size: 23px;
+}
+
+.dropdownSideBar li {
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dropdownSideBar li:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.dropdownSideBar li span:last-child {
+    margin-left: auto;
+}
+
+.unicode {
+    font-size: 18px;
+}
+/* dropdownSideBar end */
+
+.createList {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.createList i {
+    font-size: 25px;
+}
+
+.createList a {
+    color: var(--primary-blue);
+}
+
+.createList a:last-child {
+    padding-left: 8px;
+}
+
+/* NAV END */
+
+/* MAİN START */
+main {
+    /* grid-column: 2 / span 4; */
+}
+
+/* mainHeader start */
+    .mainHeader {
+        background-color: var(--primary-orange);
+        padding: 8.5px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headerFeatures {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .headerFeatures i {
+        font-size: 24px;
+    }
+
+/* mainHeader end */
+
+/* mainContainer start */
+.mainContainer {
+    padding: 15px;
+    background-color: var(--dark-orange);
+    height: calc(100vh - 55px);
+}
+
+/* addTodo start */
+.addTodo {
+    margin-bottom: 10px;
+    background-color: var(--primary-orange);
+    padding: 10px;
+}
+
+.addTodo form{
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.addTodo input {
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    padding: 0 15px;
+}
+
+.addTodo input::placeholder {
+    color: var(--white);
+}
+
+.newTodoForm button {
+    margin-left: auto;
+    padding: 5px 18px;
+    border-radius: 5px;
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+}
+
+.newTodoForm button:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.newTodoForm button:active {
+    transform: scale(1);
+}
+
+.addTodo i {
+    font-size: 20px;
+    color: var(--white);
+}
+/* addTodo end */
+
+
+/* todoList start */
+.todoList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.todoListItem {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todoListItem:hover {
+    background-color: #7fcceb;
+}
+
+.todoListItem  input {
+    width: 20px;
+    height: 20px;
+}
+
+
+.todoListItem p {
+    margin-left: auto;
+}
+
+.todoListItem div img {
+    width: 40px;
+}
+
+.todoListItem i {
+    font-size: 22px;
+}
+/* todoList end */
+
+/* complatedTodo start */
+.complatedTodo {
+    cursor: pointer;
+}
+
+.complatedTodo span {
+    background-color: var(--primary-orange);
+    padding: 5px 10px;
+    color: var(--white);
+}
+/* complatedTodo end */
+/* mainContainer end */
+
+
+/* sideBarContent start */
+
+.sideBarContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* sideBarContentItem  */
+.sideBarContentItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sideBarContentItem input {
+    width: 20px;
+    height: 20px;
+}
+
+.sideBarContentItem a {
+    margin-left: auto;
+}
+
+.sideBarContentItem i {
+    font-size: 23px;
+}
+
+/* sideBarContentName */
+.sideBarContentName {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sideBarContentName a img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sideBarContentName i {
+    cursor: pointer;
+    margin-left: auto;
+    padding: 4px;
+}
+
+/* sideBarContentDate */
+.sideBarContentDate {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sideBarContentDate a {
+    font-size: 18px;
+    color: var(--primary-blue);
+}
+
+.sideBarContentDate a i {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+/* sideBarContentNote */
+.sideBarContentNote {
+    display: grid;
+    grid-template-columns: 40px auto;
+}
+
+.sideBarContentNote i {
+    font-size: 1.2rem;
+    padding: 5px;
+    color: orange;
+}
+
+/* addComment */
+.addComment {
+    position: relative;
+    margin-bottom: 15px;
+    margin-top: auto;
+}
+
+.addComment i {
+    position: absolute;
+    z-index: 2;
+    color: var(--text-primary-gray);
+    font-size: 22px;
+    left: 8px;
+    top: 6px;
+}
+
+.addComment input {
+    width: 100%;
+    outline: none;
+    border: 2px solid var(--text-primary-gray);
+    padding: 4px;
+    padding-left: 40px;
+
+}
+
+/* sideBarcontentInfo */
+.sideBarcontentInfo {
+    color: var(--text-primary-gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sideBarcontentInfo i {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sideBarcontentInfo i:first-child {
+    border: 1px solid var(--text-primary-gray);
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+/* sideBarContent end */
+
+/* MAİN END */
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 8px;
+}
+

@@ -1,0 +1,17 @@
+﻿@model EfTest02.Models.Group;
+<form asp-action="/home/AddGroup" method="post" class="d-flex flex-column mx-auto justify-content-center">
+    <div class="formdiv2">
+        <h1 class="text-center">Grup Ekle</h1>
+        <div>
+            <label asp-for="Title">Name:</label>
+            <input asp-for="Title" />
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div>
+            <label asp-for="Id">Age:</label>
+            <input asp-for="Id" />
+            <span asp-validation-for="Id"></span>
+        </div>
+        <button type="submit">Kaydet</button>
+    </div>
+</form>

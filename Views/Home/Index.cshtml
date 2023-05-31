@@ -1,0 +1,201 @@
+﻿@model List<EfTest02.Models.Group>
+
+<!-- nav start -->
+<nav class="sideBar">
+
+    <!-- siderBarMenu start -->
+    <div class="sideBarMenu">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+        <form class="sideBarForm">
+            <input autocomplete="off" type="text" placeholder="Search.." name="search">
+        </form>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+    <!-- siderBarMenu end-->
+    <!-- sideBarHeader start -->
+    <div class="sideBarHeader">
+        <div class="sideBarUser">
+            <a href="#"><img src="wwwroot/assets/images/users/yakima.svg" alt=""></a>
+            <a href="#">Developer Enes</a>
+            <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+        <div class="notification">
+            <a href="#"><i class="fa-regular fa-bell"></i></a>
+            <a href="#"><i class="fa-regular fa-comment"></i></a>
+        </div>
+    </div>
+    <!-- sideBarHeader end -->
+    <!-- dropdownSideBar start -->
+    <ul class="dropdownSideBar">
+
+        <li>
+            <i class="fa-solid fa-inbox"></i>
+            <a href="#">Inbox</a>
+            <span class="textSMedium">2</span>
+        </li>
+        <li>
+            <i class="fa-solid fa-user-plus"></i>
+            <a href="#">Assigned to me</a>
+            <span class="textSMedium">3</span>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-star"></i>
+            <a href="#">Starred</a>
+            <span class="textSMedium">3</span>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-calendar-day"></i>
+            <a href="#">Today</a>
+            <span class="textSMedium">2</span>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-calendar-week"></i>
+            <a href="#">Week</a>
+            <span class="textSMedium">5</span>
+        </li>
+
+        <li>
+            <i class="fa-regular fa-folder"></i>
+            <a href="#">Household</a>
+            <span class="textSMedium">5</span>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-user-group"></i>
+            <a href="#">Calloborative Book Project</a>
+            <span class="textSMedium"></span>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-user-group"></i>
+            <a href="#">Podcast Team To-Dos</a>
+            <span class="textSMedium">4</span>
+        </li>
+
+        <li>
+            <i class="fa-regular fa-folder"></i>
+            <a href="#">Personel</a>
+            <span class="textSMedium unicode">❮</span>
+        </li>
+
+        <li>
+            <i class="fa-solid fa-list-ul"></i>
+            <a href="#">Work To-Dos</a>
+            <span class="textSMedium">1</span>
+        </li>
+    </ul>
+    <!-- dropdownSideBar end -->
+    <!-- createList start -->
+    <div class="createList">
+        <a href="#"><i class="fa-solid fa-plus"></i></a>
+        <a href="#">Create list</a>
+    </div>
+    <!-- createList end -->
+
+</nav>
+<!-- nav end -->
+<!-- main start -->
+<main>
+    <!-- mainHeader start -->
+    <div class="mainHeader " id="mainHeader">
+        <h1>inbox</h1>
+        <div class="headerFeatures">
+            <a href="#"><i class="fa-solid fa-user-plus"></i></a>
+            <a href="#"><i class="fa-solid fa-arrow-up-a-z"></i></a>
+        </div>
+    </div>
+    <!-- mainHeader end -->
+    <!-- mainContainer start -->
+    <div class="mainContainer" id="mainContainer">
+
+        <!-- addTodo start -->
+        <div class="addTodo" id="addTodo">
+            <form class="newTodoForm" id="newTodoForm" name="Todo" autocomplete="off">
+                <a href="#"><i class="fa-solid fa-plus"></i></a>
+                <input type="text" id="todoInput" name="todoInput" placeholder="Add a to-do...">
+                <button type="submit" id="addTodoBtn">Ekle</button>
+            </form>
+        </div>
+        <!-- addTodo end -->
+        <!-- todoList start -->
+       
+            <ul class="todoList" id="todoList">
+                @foreach (var item in Model)
+            {
+                <li class="todoListItem" id="todoListItem">
+                    <input type="checkbox">
+                    <h3>@item.Title</h3>
+                    <p>Date</p>
+                    <div>
+                        <img src="/lib/images/users/yakima.svg" alt="">
+                    </div><a href="#"><i class="fa-regular fa-star"></i></a>
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
+            }
+               
+            </ul>
+
+        <!-- todoList end -->
+        <!-- complatedTodo start -->
+        <div class="complatedTodo">
+            <span>COMPLATED TO-DOS</span>
+            <ul class="completedLists" id="completedLists">
+            </ul>
+        </div>
+        <!-- complatedTodo end -->
+
+    </div>
+    <!-- mainContainer end -->
+
+</main>
+<!-- main end -->
+<!-- sideBarContent start -->
+<div class="sideBarContent">
+
+    <!-- sideBarContentItem start -->
+    <div class="sideBarContentItem" id="sideBarContentItem">
+        <input type="checkbox">
+        <h3>Book guest for Agust</h3>
+        <a href="#"><i class="fa-regular fa-star"></i></a>
+    </div>
+    <!-- sideBarContentItem end -->
+    <!-- sideBarContentName start -->
+    <div class="sideBarContentName">
+        <a href="#"><img src="/lib/images/users/christopher-campbell-rDEOVtE7vOs-unsplash.jpg" alt=""></a>
+        <span>Developer Enes</span>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <!-- sideBarContentName end -->
+    <!-- sideBarContetDate start -->
+    <div class="sideBarContentDate">
+        <a href="#"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="#">Due 20/05/2023</a>
+    </div>
+    <!-- sideBarContetDate end -->
+    <!-- sideBarContentNote start -->
+    <div class="sideBarContentNote">
+        <a href="#"><i class="fa-solid fa-pencil"></i></a>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur officia totam minima provident qui quod nostrum similique ipsam, illo numquam iste ratione ducimus exercitationem, alias eius unde quisquam, expedita officiis voluptatibus sit. Neque aut harum odio illum, assumenda maiores iusto. Perferendis quasi rem inventore quae itaque ad fugiat beatae dignissimos.</p>
+    </div>
+    <!-- sideBarContentNote end -->
+    <!-- addComment start -->
+    <div class="addComment">
+        <form class="addCommentForm" id="addCommentForm" name="addComment" autocomplete="off">
+            <i class="fa-regular fa-comment"></i>
+            <input type="text" placeholder="Add a comment...">
+        </form>
+    </div>
+    <!-- addComment end -->
+    <!-- sideBarcontentInfo start -->
+    <div class="sideBarcontentInfo">
+        <i class="fa-solid fa-chevron-right"></i>
+        <p>Created yesterday by Enes</p>
+        <i class="fa-solid fa-trash-can"></i>
+    </div>
+    <!-- sideBarcontentInfo end -->
+
+</div>
+<!-- sideBarContent end -->
